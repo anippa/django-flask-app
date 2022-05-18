@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div style="margin-top: 100px;" class="jumbotron text-center">
+        <h3>Blog'uma Hoşgeldiniz!</h3>
+        <p>Bu Blogu Django Framework Öğrenmek için Oluşturdum...</p>
+    </div>
+
+<p>
+    {% if request.user.is_authenticated %}
+        Giriş Yapılmış! {{request.user.username}}
+    {% else %}
+        Giriş Yapılmadı!!
+    {% endif %}
+</p>
+{% endblock body %}
